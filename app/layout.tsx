@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vavilon Solutions - Real-Time Translation Platform',
     description:
-      'One tour. One guide. Every language. Real-time spoken translation for tours, museums, and conferences.',
+      'One tour. \n One guide. \n Every language. \n Real-time spoken translation for tours, museums, and conferences.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Vavilon Solutions',

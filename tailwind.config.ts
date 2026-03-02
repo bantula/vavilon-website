@@ -12,8 +12,8 @@ const config: Config = {
         // Brand color tokens as specified in Color_Scheme.txt
         // COLOR_BG
         'brand-bg': '#171A1C',
-        // Slightly elevated surface for cards/panels
-        'brand-surface': '#1F2428',
+        // Slightly elevated surface for cards/panels — blue-navy for visual depth
+        'brand-surface': '#1B2540',
         // Glass panel
         'brand-glass': 'rgba(0,0,0,0.90)',
         // Glass button
@@ -35,7 +35,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'hero-glow':
-          'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(52,76,183,0.25) 0%, transparent 70%)',
+          'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(52,76,183,0.35) 0%, transparent 70%)',
         'card-glow':
           'linear-gradient(135deg, rgba(52,76,183,0.08) 0%, rgba(196,88,27,0.04) 100%)',
       },
@@ -55,8 +55,8 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'card-hover': '0 8px 32px rgba(52,76,183,0.2)',
-        glow: '0 0 40px rgba(52,76,183,0.15)',
+        'card-hover': '0 8px 32px rgba(52,76,183,0.28)',
+        glow: '0 0 40px rgba(52,76,183,0.20)',
       },
     },
   },

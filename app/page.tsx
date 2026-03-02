@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import WhatWeOffer from '@/components/WhatWeOffer'
 import FeaturesGrid from '@/components/FeaturesGrid'
 import Mission from '@/components/Mission'
+import BookingSection from '@/components/BookingSection'
 
 export default function HomePage() {
   return (
@@ -17,6 +18,9 @@ export default function HomePage() {
 
       {/* 4. Mission - full-width quote section */}
       <Mission />
+
+      {/* 5. Booking - Calendly inline widget */}
+      <BookingSection />
     </>
   )
 }

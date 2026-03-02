@@ -17,7 +17,6 @@ const currentYear = new Date().getFullYear()
 export default function Footer() {
   return (
     <footer
-      id="contact"
       role="contentinfo"
       aria-label="Site footer"
       className="bg-brand-surface border-t border-white/8"

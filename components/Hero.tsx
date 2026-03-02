@@ -45,7 +45,7 @@ export default function Hero() {
             <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
               <span className="block">One tour.</span>
               <span className="block">One guide.</span>
-              <span className="block text-gradient">Every language.</span>
+              <span className="block text-gradient pb-1">Every language.</span>
             </h1>
 
             {/* Subtitle */}

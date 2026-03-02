@@ -65,7 +65,7 @@
 
   /* Reusable card surface */
   .card {
-    @apply bg-brand-surface rounded-xl border border-white/10 p-6
+    @apply bg-brand-surface rounded-xl border border-white/[0.12] p-6
            transition-all duration-300;
   }
 
@@ -102,7 +102,7 @@
 @layer utilities {
   /* Glass / frosted panel */
   .glass-panel {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(18, 28, 52, 0.90);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.08);
