@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none" role="img" aria-label="Vavilon Solutions">
+  <!-- V glyph: two overlapping triangles, blue + orange -->
+  <polygon points="0,4 14,4 8,28 2,28" fill="#344CB7"/>
+  <polygon points="6,4 20,4 14,28 8,28" fill="#C4581B"/>
+
+  <!-- "AVILON" wordmark -->
+  <text
+    x="28"
+    y="27"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="21"
+    font-weight="700"
+    letter-spacing="-0.5"
+    fill="#FFFFFF"
+  >AVILON</text>
+
+  <!-- Thin tagline below (optional — visible at larger sizes) -->
+  <text
+    x="28"
+    y="37"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="7.5"
+    font-weight="400"
+    letter-spacing="1.4"
+    fill="#8B9199"
+  >SOLUTIONS</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Vavilon app interface — live translation chat">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1F2428"/>
+
+  <!-- Header bar -->
+  <rect x="0" y="0" width="800" height="60" fill="#0D0F11"/>
+  <circle cx="32" cy="30" r="14" fill="#344CB7"/>
+  <text x="56" y="35" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="white">Vavilon Live</text>
+  <!-- Status indicator -->
+  <circle cx="720" cy="30" r="6" fill="#22c55e"/>
+  <text x="734" y="35" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">LIVE</text>
+
+  <!-- Session info bar -->
+  <rect x="0" y="60" width="800" height="44" fill="#171A1C"/>
+  <rect x="16" y="72" width="120" height="20" rx="10" fill="#344CB7" opacity="0.25"/>
+  <text x="76" y="85" font-family="Inter,sans-serif" font-size="11" fill="#344CB7" text-anchor="middle">🎙️ EN → IT</text>
+  <rect x="148" y="72" width="130" height="20" rx="10" fill="#C4581B" opacity="0.2"/>
+  <text x="213" y="85" font-family="Inter,sans-serif" font-size="11" fill="#C4581B" text-anchor="middle">👥 47 listeners</text>
+
+  <!-- Chat area background -->
+  <rect x="0" y="104" width="800" height="440" fill="#1A1D20"/>
+
+  <!-- Guide message bubble (left) -->
+  <circle cx="36" cy="156" r="18" fill="#344CB7" opacity="0.8"/>
+  <text x="36" y="162" font-family="Inter,sans-serif" font-size="12" fill="white" text-anchor="middle">🎙</text>
+  <rect x="64" y="130" width="380" height="56" rx="14" fill="#1F2428"/>
+  <rect x="64" y="130" width="4" height="56" rx="2" fill="#344CB7"/>
+  <text x="80" y="152" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">Tour Guide</text>
+  <text x="80" y="170" font-family="Inter,sans-serif" font-size="13" fill="white">Welcome to the Colosseum, everyone.</text>
+
+  <!-- Translation bubble (right) -->
+  <rect x="356" y="208" width="380" height="56" rx="14" fill="#1F2428"/>
+  <rect x="732" y="208" width="4" height="56" rx="2" fill="#C4581B"/>
+  <text x="368" y="230" font-family="Inter,sans-serif" font-size="11" fill="#C4581B">Italian 🇮🇹</text>
+  <text x="368" y="248" font-family="Inter,sans-serif" font-size="13" fill="white">Benvenuti al Colosseo, tutti.</text>
+  <circle cx="764" cy="236" r="18" fill="#C4581B" opacity="0.8"/>
+  <text x="764" y="242" font-family="Inter,sans-serif" font-size="12" fill="white" text-anchor="middle">🤖</text>
+
+  <!-- Guide message 2 -->
+  <circle cx="36" cy="296" r="18" fill="#344CB7" opacity="0.8"/>
+  <text x="36" y="302" font-family="Inter,sans-serif" font-size="12" fill="white" text-anchor="middle">🎙</text>
+  <rect x="64" y="270" width="440" height="56" rx="14" fill="#1F2428"/>
+  <rect x="64" y="270" width="4" height="56" rx="2" fill="#344CB7"/>
+  <text x="80" y="292" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">Tour Guide</text>
+  <text x="80" y="310" font-family="Inter,sans-serif" font-size="13" fill="white">This amphitheater was built in 70–80 AD.</text>
+
+  <!-- Translation bubble 2 (right) -->
+  <rect x="296" y="348" width="440" height="56" rx="14" fill="#1F2428"/>
+  <rect x="732" y="348" width="4" height="56" rx="2" fill="#C4581B"/>
+  <text x="308" y="370" font-family="Inter,sans-serif" font-size="11" fill="#C4581B">Italian 🇮🇹</text>
+  <text x="308" y="388" font-family="Inter,sans-serif" font-size="13" fill="white">Questo anfiteatro fu costruito nel 70–80 d.C.</text>
+  <circle cx="764" cy="376" r="18" fill="#C4581B" opacity="0.8"/>
+  <text x="764" y="382" font-family="Inter,sans-serif" font-size="12" fill="white" text-anchor="middle">🤖</text>
+
+  <!-- Typing indicator -->
+  <circle cx="36" cy="430" r="18" fill="#344CB7" opacity="0.6"/>
+  <text x="36" y="436" font-family="Inter,sans-serif" font-size="12" fill="white" text-anchor="middle">🎙</text>
+  <rect x="64" y="414" width="80" height="36" rx="18" fill="#1F2428"/>
+  <circle cx="88" cy="432" r="4" fill="#8B9199" opacity="0.8"/>
+  <circle cx="104" cy="432" r="4" fill="#8B9199" opacity="0.6"/>
+  <circle cx="120" cy="432" r="4" fill="#8B9199" opacity="0.4"/>
+
+  <!-- Language selector strip at bottom -->
+  <rect x="0" y="496" width="800" height="60" fill="#0D0F11"/>
+  <text x="16" y="520" font-family="Inter,sans-serif" font-size="10" fill="#8B9199">Listening in:</text>
+  <rect x="16" y="526" width="60" height="22" rx="11" fill="#344CB7"/>
+  <text x="46" y="540" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle">🇮🇹 IT</text>
+  <rect x="84" y="526" width="60" height="22" rx="11" fill="#1F2428" stroke="#344CB7" stroke-width="1" opacity="0.5"/>
+  <text x="114" y="540" font-family="Inter,sans-serif" font-size="10" fill="#8B9199" text-anchor="middle">🇪🇸 ES</text>
+  <rect x="152" y="526" width="60" height="22" rx="11" fill="#1F2428" stroke="#344CB7" stroke-width="1" opacity="0.5"/>
+  <text x="182" y="540" font-family="Inter,sans-serif" font-size="10" fill="#8B9199" text-anchor="middle">🇩🇪 DE</text>
+  <rect x="220" y="526" width="60" height="22" rx="11" fill="#1F2428" stroke="#344CB7" stroke-width="1" opacity="0.5"/>
+  <text x="250" y="540" font-family="Inter,sans-serif" font-size="10" fill="#8B9199" text-anchor="middle">🇫🇷 FR</text>
+  <text x="300" y="540" font-family="Inter,sans-serif" font-size="10" fill="#5C6370">+16 more</text>
+
+  <!-- Subtle latency label -->
+  <text x="700" y="536" font-family="Inter,sans-serif" font-size="10" fill="#22c55e" text-anchor="end">⚡ 312ms</text>
+</svg>

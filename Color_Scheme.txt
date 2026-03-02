@@ -1,0 +1,18 @@
+Background:
+#171A1C
+
+Glass Panel:
+#000000E6
+
+Accent 1 (Button 1 - Blue): 
+Default: #344CB7
+Hover: #3B56D1
+
+Accent 2 (Button 2 - Orange): 
+Default: #C4581B
+Hover: #CC6931
+
+Low Accent (Glass Button): 
+Default: #FFFFFF1C
+Hover: #FFFFFF1C
+

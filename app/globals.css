@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-bg text-content antialiased;
+  }
+
+  /* Accessible focus ring for all interactive elements */
+  *:focus-visible {
+    outline: 2px solid #344CB7;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Remove outline for mouse users */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Smooth transitions for interactive elements */
+  a, button {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Primary CTA — orange */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           px-7 py-3.5 rounded-lg
+           bg-accent text-white font-semibold text-base
+           hover:bg-accent-hover
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent
+           transition-all duration-200
+           select-none;
+  }
+
+  /* Secondary CTA — blue */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           px-7 py-3.5 rounded-lg
+           bg-primary text-white font-semibold text-base
+           hover:bg-primary-hover
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary
+           transition-all duration-200
+           select-none;
+  }
+
+  /* Ghost / outline button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           px-7 py-3.5 rounded-lg
+           border border-white/20 text-white font-semibold text-base
+           hover:bg-white/10 hover:border-white/40
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60
+           transition-all duration-200
+           select-none;
+  }
+
+  /* Reusable card surface */
+  .card {
+    @apply bg-brand-surface rounded-xl border border-white/10 p-6
+           transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-primary/40 shadow-card-hover;
+  }
+
+  /* Section tag / eyebrow label */
+  .eyebrow {
+    @apply inline-block text-xs font-bold tracking-[0.15em] uppercase text-primary;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold text-white leading-tight;
+  }
+
+  /* Section subheading */
+  .section-sub {
+    @apply text-base sm:text-lg text-content-muted leading-relaxed;
+  }
+
+  /* Centered section wrapper */
+  .section-center {
+    @apply text-center mx-auto max-w-2xl;
+  }
+
+  /* Standard container */
+  .container-site {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Glass / frosted panel */
+  .glass-panel {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Subtle text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, #344CB7, #C4581B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Orange accent underline decoration */
+  .accent-underline {
+    text-decoration: underline;
+    text-decoration-color: #C4581B;
+    text-underline-offset: 4px;
+  }
+}
+
+/* Skip-to-content link — visible only on keyboard focus */
+.skip-link {
+  @apply sr-only;
+}
+.skip-link:focus {
+  @apply not-sr-only fixed top-4 left-4 z-[100]
+         bg-primary text-white font-semibold
+         px-5 py-3 rounded-lg shadow-lg;
+}
+
+/* Scrollbar styling (optional cosmetic) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #171A1C;
+}
+::-webkit-scrollbar-thumb {
+  background: #344CB7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B56D1;
+}

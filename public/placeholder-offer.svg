@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Speaker view — tour guide starting a live translation session">
+  <!-- Background -->
+  <rect width="600" height="750" fill="#1F2428"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="600" height="56" fill="#0D0F11"/>
+  <circle cx="28" cy="28" r="12" fill="#344CB7"/>
+  <text x="48" y="33" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="white">Speaker View</text>
+  <rect x="480" y="14" width="100" height="28" rx="14" fill="#344CB7" opacity="0.2"/>
+  <text x="530" y="32" font-family="Inter,sans-serif" font-size="11" fill="#344CB7" text-anchor="middle">● Session Active</text>
+
+  <!-- Welcome banner -->
+  <rect x="16" y="72" width="568" height="56" rx="12" fill="#344CB7" opacity="0.12"/>
+  <rect x="16" y="72" width="3" height="56" rx="1.5" fill="#344CB7"/>
+  <text x="32" y="96" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="white">Welcome, Ana! 👋</text>
+  <text x="32" y="114" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">You are broadcasting to 47 listeners in 8 languages</text>
+
+  <!-- Microphone section -->
+  <rect x="16" y="144" width="568" height="200" rx="16" fill="#171A1C"/>
+  <!-- Mic icon circle -->
+  <circle cx="300" cy="220" r="56" fill="#344CB7" opacity="0.15"/>
+  <circle cx="300" cy="220" r="44" fill="#344CB7" opacity="0.1"/>
+  <!-- Mic SVG shape -->
+  <rect x="288" y="188" width="24" height="40" rx="12" fill="#344CB7"/>
+  <path d="M272 224 Q272 248 300 248 Q328 248 328 224" stroke="#344CB7" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <line x1="300" y1="248" x2="300" y2="264" stroke="#344CB7" stroke-width="3" stroke-linecap="round"/>
+  <line x1="286" y1="264" x2="314" y2="264" stroke="#344CB7" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="300" y="310" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle">Click to Start Speaking</text>
+  <text x="300" y="328" font-family="Inter,sans-serif" font-size="11" fill="#8B9199" text-anchor="middle">Source: English (en-US)</text>
+
+  <!-- Language targets -->
+  <rect x="16" y="360" width="568" height="44" rx="10" fill="#1A1D20"/>
+  <text x="32" y="387" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">Broadcasting to:</text>
+  <text x="150" y="387" font-family="Inter,sans-serif" font-size="13" fill="white">🇮🇹 🇪🇸 🇩🇪 🇫🇷 🇵🇱 🇷🇸 🇭🇺 🇷🇴</text>
+
+  <!-- QR section -->
+  <rect x="16" y="420" width="568" height="180" rx="16" fill="#171A1C"/>
+  <text x="32" y="450" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="white">Share with listeners</text>
+  <text x="32" y="468" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">Scan QR or share the join link below</text>
+
+  <!-- QR code placeholder (grid pattern) -->
+  <rect x="32" y="480" width="100" height="100" rx="8" fill="#1F2428" stroke="#344CB7" stroke-width="1.5" opacity="0.5"/>
+  <!-- QR grid simulation -->
+  <rect x="40" y="488" width="24" height="24" rx="3" fill="#344CB7" opacity="0.7"/>
+  <rect x="68" y="488" width="8" height="8" rx="1" fill="#344CB7" opacity="0.5"/>
+  <rect x="80" y="488" width="8" height="8" rx="1" fill="#344CB7" opacity="0.5"/>
+  <rect x="92" y="488" width="24" height="8" rx="1" fill="#344CB7" opacity="0.5"/>
+  <rect x="40" y="520" width="8" height="8" rx="1" fill="#344CB7" opacity="0.5"/>
+  <rect x="56" y="520" width="16" height="16" rx="2" fill="#344CB7" opacity="0.5"/>
+  <rect x="76" y="516" width="12" height="12" rx="2" fill="#344CB7" opacity="0.5"/>
+  <rect x="92" y="520" width="24" height="24" rx="3" fill="#344CB7" opacity="0.7"/>
+  <rect x="40" y="548" width="24" height="24" rx="3" fill="#344CB7" opacity="0.7"/>
+  <rect x="68" y="552" width="8" height="8" rx="1" fill="#344CB7" opacity="0.5"/>
+  <rect x="80" y="548" width="12" height="16" rx="2" fill="#344CB7" opacity="0.5"/>
+
+  <!-- Join code -->
+  <rect x="148" y="488" width="420" height="44" rx="10" fill="#1F2428" stroke="#344CB7" stroke-width="1" opacity="0.4"/>
+  <text x="358" y="516" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle" letter-spacing="6">ABC123</text>
+  <rect x="148" y="540" width="420" height="32" rx="8" fill="#344CB7" opacity="0.15"/>
+  <text x="358" y="561" font-family="Inter,sans-serif" font-size="10" fill="#344CB7" text-anchor="middle">www.vavilonapp.rs/join?code=ABC123</text>
+
+  <!-- Listener count bar -->
+  <rect x="16" y="616" width="568" height="56" rx="12" fill="#1A1D20"/>
+  <text x="32" y="640" font-family="Inter,sans-serif" font-size="11" fill="#8B9199">Active Listeners</text>
+  <!-- Progress bars -->
+  <rect x="32" y="648" width="120" height="8" rx="4" fill="#344CB7" opacity="0.2"/>
+  <rect x="32" y="648" width="94" height="8" rx="4" fill="#344CB7"/>
+  <text x="162" y="657" font-family="Inter,sans-serif" font-size="10" fill="white">47 / 200</text>
+
+  <text x="340" y="645" font-family="Inter,sans-serif" font-size="11" fill="#22c55e">⚡ 286ms avg latency</text>
+
+  <!-- Footer area -->
+  <rect x="0" y="690" width="600" height="60" fill="#0D0F11"/>
+  <text x="300" y="725" font-family="Inter,sans-serif" font-size="10" fill="#5C6370" text-anchor="middle">Vavilon Solutions — vavilonsolutions.rs</text>
+</svg>
