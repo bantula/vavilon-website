@@ -10,7 +10,6 @@ const productLinks = [
 const companyLinks = [
   { label: 'Mission', href: '#mission' },
   { label: 'Contact', href: '#contact' },
-  { label: 'Newsletter', href: '#contact' },
 ]
 
 const currentYear = new Date().getFullYear()
@@ -18,6 +17,7 @@ const currentYear = new Date().getFullYear()
 export default function Footer() {
   return (
     <footer
+      id="contact"
       role="contentinfo"
       aria-label="Site footer"
       className="bg-brand-surface border-t border-white/8"
@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="container-site py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
 
-          {/* Column 1 — Brand */}
+          {/* Column 1 - Brand */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <Link
               href="/"
@@ -33,11 +33,11 @@ export default function Footer() {
               className="inline-block"
             >
               <Image
-                src="/vavilon-logo.svg"
+                src="/vavilon-logo.png"
                 alt="Vavilon Solutions"
                 width={140}
-                height={36}
-                className="h-8 w-auto"
+                height={46}
+                className="h-9 w-auto"
               />
             </Link>
             <p className="text-content-muted text-sm leading-relaxed max-w-xs">
@@ -45,7 +45,7 @@ export default function Footer() {
               One speaker, twenty languages, zero apps to install.
             </p>
 
-            {/* Social / App links */}
+            {/* App and email links */}
             <div className="flex items-center gap-3">
               <a
                 href="https://www.vavilonapp.rs"
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 — Product */}
+          {/* Column 2 - Product */}
           <nav aria-label="Product links">
             <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">
               Product
@@ -108,7 +108,7 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Column 3 — Company + CTA */}
+          {/* Column 3 - Company + CTA */}
           <div>
             <nav aria-label="Company links">
               <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">

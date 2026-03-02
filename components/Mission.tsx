@@ -47,7 +47,7 @@ export default function Mission() {
               We believe every experience deserves to be{' '}
               <span className="text-gradient">understood.</span>{' '}
               Vavilon exists to remove the language barrier from tours,
-              museums, and conferences — from any moment that should bring
+              museums, and conferences, from any moment that should bring
               people together, not divide them.
             </p>
           </blockquote>

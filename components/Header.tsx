@@ -24,16 +24,16 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            aria-label="Vavilon Solutions — homepage"
+            aria-label="Vavilon Solutions - homepage"
             className="flex items-center gap-2 group"
           >
             <Image
-              src="/vavilon-logo.svg"
+              src="/vavilon-logo.png"
               alt="Vavilon logo"
               width={140}
-              height={36}
+              height={46}
               priority
-              className="h-8 w-auto"
+              className="h-9 w-auto"
             />
           </Link>
 

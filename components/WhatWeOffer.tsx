@@ -11,11 +11,11 @@ const offerings = [
   },
   {
     label: 'QR code instant join',
-    detail: 'Scan a QR code to join — no manual code entry, no friction.',
+    detail: 'Scan a QR code to join. No manual code entry, no friction.',
   },
   {
     label: 'Any device, any browser',
-    detail: 'Works on iOS, Android, desktops — no installation required.',
+    detail: 'Works on iOS, Android, and desktops. No installation required.',
   },
   {
     label: '200 simultaneous listeners',
@@ -91,7 +91,7 @@ export default function WhatWeOffer() {
             <p className="section-sub mb-10">
               Vavilon is a web-based real-time translation platform built for
               tours, museums, exhibitions, and conferences. Your guide or
-              speaker talks — every listener hears and reads it in their own
+              speaker talks, and every listener hears and reads it in their own
               language, instantly.
             </p>
 

@@ -4,7 +4,7 @@ const features = [
   {
     title: 'Real-Time Translation',
     description:
-      'Speech is recognised and translated in under 500 ms — every word delivered to listeners as fast as it is spoken.',
+      'Speech is recognised and translated in under 500 ms. Every word delivered to listeners as fast as it is spoken.',
     accent: false,
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -15,7 +15,7 @@ const features = [
   {
     title: '20 Languages',
     description:
-      'Serbian, English, German, French, Italian, Spanish, Chinese, Japanese, Polish, Ukrainian, and 10 more European languages — all covered.',
+      'Serbian, English, German, French, Italian, Spanish, Chinese, Japanese, Polish, Ukrainian, and 10 more European languages. All covered.',
     accent: false,
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -49,7 +49,7 @@ const features = [
   {
     title: 'Live Subtitles',
     description:
-      'Listeners see a modern chat-style interface: guide messages on the left, translated responses on the right — with an animated typing indicator.',
+      'Listeners see a modern chat-style interface: guide messages on the left, translated responses on the right, with an animated typing indicator.',
     accent: false,
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -60,7 +60,7 @@ const features = [
   {
     title: 'Works Anywhere',
     description:
-      'Tours, museums, exhibitions, guided walks, conferences — any setting where language is a barrier becomes a connected experience.',
+      'Tours, museums, exhibitions, guided walks, conferences. Any setting where language is a barrier becomes a connected experience.',
     accent: true,
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -92,7 +92,7 @@ export default function FeaturesGrid() {
             Everything your team needs
           </h2>
           <p className="section-sub">
-            Built from the ground up for live, high-stakes language scenarios —
+            Built from the ground up for live, high-stakes language scenarios
             where every word matters and every listener deserves to understand.
           </p>
         </div>

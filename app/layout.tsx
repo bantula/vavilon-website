@@ -12,7 +12,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Vavilon Solutions — Real-Time Translation for Tours & Conferences',
+  title: 'Vavilon Solutions - Real-Time Translation for Tours & Conferences',
   description:
     'Break every language barrier. Real-time spoken translation for tours, museums, and conferences. 20 languages, 200 concurrent listeners, no app required.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Vavilon Solutions' }],
   openGraph: {
-    title: 'Vavilon Solutions — Real-Time Translation Platform',
+    title: 'Vavilon Solutions - Real-Time Translation Platform',
     description:
       'One speaker. Twenty languages. Zero apps. Break language barriers at tours, museums, and conferences.',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vavilon Solutions — Real-Time Translation Platform',
+    title: 'Vavilon Solutions - Real-Time Translation Platform',
     description:
       'One speaker. Twenty languages. Zero apps. Real-time spoken translation for tours, museums, and conferences.',
   },

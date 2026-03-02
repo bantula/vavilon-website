@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <section
-      aria-label="Hero — Break Every Language Barrier"
+      aria-label="Hero - Break Every Language Barrier"
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
       {/* Background gradient glow */}
@@ -51,7 +51,7 @@ export default function Hero() {
             <p className="text-lg sm:text-xl text-content-muted leading-relaxed max-w-xl mb-10">
               One speaker. Twenty languages. Zero apps to install.
               Vavilon delivers live spoken translation and subtitles to every
-              listener — instantly, from any browser.
+              listener, instantly, from any browser.
             </p>
 
             {/* CTA group — Book a Demo is the prominent primary action */}
