@@ -1,4 +1,4 @@
-# Vavilon Solutions — Marketing Website
+# Vavilon Solutions - Marketing Website
 
 Static Next.js marketing site for [Vavilon Solutions](https://vavilonsolutions.rs) — a real-time spoken translation platform for tours, museums, and conferences.
 
@@ -8,27 +8,27 @@ Static Next.js marketing site for [Vavilon Solutions](https://vavilonsolutions.r
 
 ## Tech Stack
 
-| Layer        | Technology                              |
-|--------------|-----------------------------------------|
-| Framework    | Next.js 15 (App Router)                 |
-| UI Library   | React 19                                |
-| Styling      | Tailwind CSS v3 (custom brand tokens)   |
-| Language     | TypeScript                              |
-| Fonts        | Inter (self-hosted via `next/font`)     |
-| Testing      | Playwright (E2E, desktop + mobile)      |
+| Layer        | Technology                            |
+|--------------|---------------------------------------|
+| Framework    | Next.js 15 (App Router)               |
+| UI Library   | React 19                              |
+| Styling      | Tailwind CSS v3 (custom brand tokens) |
+| Language     | TypeScript                            |
+| Fonts        | Inter (self-hosted via `next/font`)   |
+| Testing      | Playwright (E2E, desktop + mobile)    |
 
 ---
 
 ## Brand Colors (Tailwind Tokens)
 
-| Token             | Hex / Value         | Usage                        |
-|-------------------|---------------------|------------------------------|
-| `brand-bg`        | `#171A1C`           | Page background              |
-| `brand-surface`   | `#1F2428`           | Card / section surfaces      |
-| `primary`         | `#344CB7`           | Primary blue — nav, labels   |
-| `primary-hover`   | `#3B56D1`           | Blue hover state             |
-| `accent`          | `#C4581B`           | Orange — primary CTA         |
-| `accent-hover`    | `#CC6931`           | Orange hover state           |
+| Token             | Hex / Value   | Usage                      |
+|-------------------|---------------|----------------------------|
+| `brand-bg`        | `#171A1C`     | Page background            |
+| `brand-surface`   | `#1F2428`     | Card / section surfaces    |
+| `primary`         | `#344CB7`     | Primary blue - nav, labels |
+| `primary-hover`   | `#3B56D1`     | Blue hover state           |
+| `accent`          | `#C4581B`     | Orange - primary CTA       |
+| `accent-hover`    | `#CC6931`     | Orange hover state         |
 
 ---
 
@@ -39,19 +39,18 @@ vavilon-website/
 ├── app/
 │   ├── globals.css          # Tailwind directives + utility classes
 │   ├── layout.tsx           # Root layout: Header, Footer, StickyContactButton
-│   └── page.tsx             # Homepage: Hero → WhatWeOffer → FeaturesGrid → Mission → Newsletter
+│   └── page.tsx             # Homepage: Hero, WhatWeOffer, FeaturesGrid, Mission
 ├── components/
 │   ├── Header.tsx           # Sticky header with desktop nav + mobile hamburger
 │   ├── Hero.tsx             # Split-layout hero, CTA below copy
 │   ├── WhatWeOffer.tsx      # Two-column: visual left + feature list right
-│   ├── FeaturesGrid.tsx     # 3×2 responsive card grid
+│   ├── FeaturesGrid.tsx     # 3x2 responsive card grid
 │   ├── FeatureCard.tsx      # Individual feature card component
 │   ├── Mission.tsx          # Full-width mission statement section
-│   ├── Newsletter.tsx       # Email signup + "Book a Demo" block
-│   ├── Footer.tsx           # Multi-column footer with secondary CTA
+│   ├── Footer.tsx           # Multi-column footer with Book a Demo CTA
 │   └── StickyContactButton.tsx  # Right-side persistent vertical button
 ├── public/
-│   ├── vavilon-logo.svg     # Brand logo (SVG)
+│   ├── vavilon-logo.png     # Brand logo
 │   ├── placeholder-hero.svg # Hero section app illustration
 │   └── placeholder-offer.svg # What We Offer illustration
 ├── tests/
@@ -65,13 +64,13 @@ vavilon-website/
 
 ## Layout Decisions (Different from original site)
 
-| Original site                      | This site                                      |
-|------------------------------------|------------------------------------------------|
-| Clustered CTAs at the top          | Single prominent "Book a Demo" below hero copy |
-| Centered single-column hero        | Split hero: text left + app visual right       |
-| CTAs in the header                 | Header is nav-only; CTAs in hero + footer      |
-| No persistent contact affordance   | Sticky right-side "Contact Us" button          |
-| Standard list-style features       | 3×2 card grid with icons                       |
+| Original site                    | This site                                      |
+|----------------------------------|------------------------------------------------|
+| Clustered CTAs at the top        | Single prominent "Book a Demo" below hero copy |
+| Centered single-column hero      | Split hero: text left + app visual right       |
+| CTAs in the header               | Header is nav-only; CTAs in hero + footer      |
+| No persistent contact affordance | Sticky right-side "Contact Us" button          |
+| Standard list-style features     | 3x2 card grid with icons                       |
 
 ---
 
@@ -80,7 +79,7 @@ vavilon-website/
 ### Prerequisites
 
 - Node.js 18 or later
-- npm 9+ (or use `npx`)
+- npm 9+
 
 ### Install Dependencies
 
@@ -135,8 +134,8 @@ npx playwright show-report
 
 ### What the tests verify
 
-- **Hero:** H1 heading visible on desktop & mobile, "Book a Demo" CTA visible
-- **Mobile viewport (375px):** CTA has ≥44px tap target (WCAG 2.5.5)
+- **Hero:** H1 heading visible on desktop and mobile, "Book a Demo" CTA visible
+- **Mobile viewport (375px):** CTA has 44px+ tap target (WCAG 2.5.5)
 - **Sticky button:** Visible, links to `#contact`, adequate tap target
 - **Navigation:** Desktop nav, mobile hamburger menu open/close
 - **Sections:** All major sections render headings
@@ -151,28 +150,23 @@ npx playwright show-report
 - Semantic HTML: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<article>`
 - `aria-label` on all navigation elements and the sticky button
 - `aria-expanded` / `aria-controls` on mobile menu button
-- `role="alert"` / `aria-live="polite"` on form status messages
 - All images have descriptive `alt` text
 - Focus rings on all interactive elements (`:focus-visible`)
-- Minimum 44×44px tap targets on CTAs and the sticky button
+- Minimum 44x44px tap targets on CTAs and the sticky button
 - Colour contrast: white text on dark backgrounds exceeds 7:1
 
 ---
 
-## GitHub Setup (Separate Repository)
+## GitHub Repository
 
-This project is intentionally a separate repository from the Vavilon web app.
+Live at: [https://github.com/bantula/vavilon-website](https://github.com/bantula/vavilon-website)
+
+Push future changes:
 
 ```bash
-# Inside the project folder:
-git init
 git add .
-git commit -m "Initial commit: Vavilon marketing website"
-
-# Create a new GitHub repo (via GitHub CLI or github.com), then:
-git remote add origin https://github.com/YOUR_ORG/vavilon-website.git
-git branch -M main
-git push -u origin main
+git commit -m "your message"
+git push
 ```
 
 ---
@@ -180,9 +174,8 @@ git push -u origin main
 ## Customisation Checklist
 
 - [ ] Replace `info@vavilonsolutions.rs` with the real contact/demo booking email
-- [ ] Connect newsletter form to a mailing service (Mailchimp, Resend, etc.)
 - [ ] Replace SVG placeholder illustrations with real screenshots/photography
-- [ ] Add OG image (`public/og-image.png`, 1200×630)
+- [ ] Add OG image (`public/og-image.png`, 1200x630)
 - [ ] Update `vavilonsolutions.rs` links if the domain changes
 - [ ] Add Google Analytics / Plausible script in `layout.tsx` if needed
 - [ ] Set up Vercel / Azure Static Web Apps deployment
@@ -191,15 +184,15 @@ git push -u origin main
 
 ## Scripts Reference
 
-| Script                | Command                          |
-|-----------------------|----------------------------------|
-| Dev server            | `npm run dev`                    |
-| Production build      | `npm run build`                  |
-| Production server     | `npm run start`                  |
-| Lint                  | `npm run lint`                   |
-| E2E tests             | `npm run test:e2e`               |
-| E2E tests (UI mode)   | `npm run test:e2e:ui`            |
+| Script              | Command                |
+|---------------------|------------------------|
+| Dev server          | `npm run dev`          |
+| Production build    | `npm run build`        |
+| Production server   | `npm run start`        |
+| Lint                | `npm run lint`         |
+| E2E tests           | `npm run test:e2e`     |
+| E2E tests (UI mode) | `npm run test:e2e:ui`  |
 
 ---
 
-*Vavilon Solutions d.o.o. — Built in Serbia 🇷🇸*
+*Vavilon Solutions d.o.o. - Built in Serbia*

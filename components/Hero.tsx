@@ -42,9 +42,10 @@ export default function Hero() {
             </div>
 
             {/* H1 */}
-            <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
-              One tour. One guide.{' '}
-              <span className="text-gradient">Every language.</span>
+            <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+              <span className="block">One tour.</span>
+              <span className="block">One guide.</span>
+              <span className="block text-gradient">Every language.</span>
             </h1>
 
             {/* Subtitle */}
