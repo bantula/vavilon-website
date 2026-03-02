@@ -13,9 +13,9 @@ const features = [
     ),
   },
   {
-    title: '20 Languages',
+    title: '70+ Languages',
     description:
-      'Serbian, English, German, French, Italian, Spanish, Chinese, Japanese, Polish, Ukrainian, and 10 more European languages. All covered.',
+      'Serbian, English, German, French, Italian, Spanish, Chinese, Japanese, Polish, Ukrainian, and dozens more. Every major language covered.',
     accent: false,
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -36,9 +36,9 @@ const features = [
     ),
   },
   {
-    title: '200 Concurrent Listeners',
+    title: '60+ People Per Tour',
     description:
-      'Built for groups. One speaker can broadcast live translation to 200 listeners simultaneously across multiple language channels.',
+      'Built for tour groups. One guide can broadcast live translation to 60 or more listeners simultaneously across multiple language channels.',
     accent: false,
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">

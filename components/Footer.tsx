@@ -42,7 +42,7 @@ export default function Footer() {
             </Link>
             <p className="text-content-muted text-sm leading-relaxed max-w-xs">
               Real-time spoken translation for tours, museums, and conferences.
-              One speaker, twenty languages, zero apps to install.
+              One speaker, 70+ languages, zero apps to install.
             </p>
 
             {/* App and email links */}

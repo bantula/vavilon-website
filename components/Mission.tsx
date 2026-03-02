@@ -85,7 +85,7 @@ export default function Mission() {
             <Pillar
               icon="🌍"
               title="Inclusivity"
-              desc="20 languages ensuring no listener is left behind."
+              desc="70+ languages ensuring no listener is left behind."
             />
             <Pillar
               icon="🔒"

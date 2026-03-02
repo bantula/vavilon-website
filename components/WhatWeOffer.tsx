@@ -18,11 +18,11 @@ const offerings = [
     detail: 'Works on iOS, Android, and desktops. No installation required.',
   },
   {
-    label: '200 simultaneous listeners',
-    detail: 'Designed for real crowds: tours, museums, and large conferences.',
+    label: '60+ people per tour',
+    detail: 'Designed for tour groups of 60 or more, with room for larger events.',
   },
   {
-    label: '20 languages including Serbian',
+    label: '70+ languages including Serbian',
     detail: 'English, German, French, Italian, Spanish, Chinese, and more.',
   },
 ]
@@ -71,7 +71,7 @@ export default function WhatWeOffer() {
                 aria-hidden="true"
               >
                 <StatBadge icon="🎙️" text="1 speaker broadcasting" color="blue" />
-                <StatBadge icon="👥" text="200 listeners, 20 languages" color="orange" />
+                <StatBadge icon="👥" text="60+ people, 70+ languages" color="orange" />
               </div>
             </div>
           </div>

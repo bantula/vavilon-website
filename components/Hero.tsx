@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <section
-      aria-label="Hero - Break Every Language Barrier"
+      aria-label="Hero - One tour. One guide. Every language."
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
       {/* Background gradient glow */}
@@ -43,13 +43,13 @@ export default function Hero() {
 
             {/* H1 */}
             <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
-              Break Every{' '}
-              <span className="text-gradient">Language Barrier</span>
+              One tour. One guide.{' '}
+              <span className="text-gradient">Every language.</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-content-muted leading-relaxed max-w-xl mb-10">
-              One speaker. Twenty languages. Zero apps to install.
+              One speaker. 70+ languages. Zero apps to install.
               Vavilon delivers live spoken translation and subtitles to every
               listener, instantly, from any browser.
             </p>
@@ -81,9 +81,9 @@ export default function Hero() {
 
             {/* Social proof strip */}
             <div className="flex items-center gap-6 mt-10 pt-8 border-t border-white/10 w-full">
-              <Stat value="20" label="Languages" />
+              <Stat value="70+" label="Languages" />
               <div className="w-px h-8 bg-white/15" aria-hidden="true" />
-              <Stat value="200" label="Concurrent listeners" />
+              <Stat value="60+" label="People per tour" />
               <div className="w-px h-8 bg-white/15" aria-hidden="true" />
               <Stat value="<500ms" label="Latency" />
             </div>
@@ -127,7 +127,7 @@ export default function Hero() {
                            bg-primary/90 backdrop-blur-sm rounded-xl px-4 py-2.5
                            text-sm font-bold text-white"
               >
-                🌍 20 Languages
+                🌍 70+ Languages
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Vavilon Solutions - Real-Time Translation for Tours & Conferences',
   description:
-    'Break every language barrier. Real-time spoken translation for tours, museums, and conferences. 20 languages, 200 concurrent listeners, no app required.',
+    'One tour. One guide. Every language. Real-time spoken translation for tours, museums, and conferences. 70+ languages, 60+ people per tour, no app required.',
   keywords: [
     'real-time translation',
     'tour guide translation',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vavilon Solutions - Real-Time Translation Platform',
     description:
-      'One speaker. Twenty languages. Zero apps. Break language barriers at tours, museums, and conferences.',
+      'One tour. One guide. Every language. Real-time spoken translation for tours, museums, and conferences.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Vavilon Solutions',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Vavilon Solutions - Real-Time Translation Platform',
     description:
-      'One speaker. Twenty languages. Zero apps. Real-time spoken translation for tours, museums, and conferences.',
+      'One tour. One guide. Every language. Real-time spoken translation for tours, museums, and conferences.',
   },
   robots: {
     index: true,
