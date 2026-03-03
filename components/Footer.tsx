@@ -127,13 +127,6 @@ export default function Footer() {
               </ul>
             </nav>
 
-            {/* Footer Book a Demo CTA */}
-            <a
-              href="mailto:info@vavilonsolutions.rs?subject=Demo%20Request"
-              className="btn-primary !py-3 !px-5 !text-sm w-full text-center"
-            >
-              Book a Demo
-            </a>
           </div>
 
         </div>
@@ -141,7 +134,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-content-subtle text-xs">
-            © {currentYear} Vavilon Solutions d.o.o. All rights reserved.
+            © {currentYear} Vavilon Solutions DOO Kraljevo. All rights reserved.
           </p>
           <p className="text-content-subtle text-xs">
             Built in Serbia 🇷🇸 · Powered by{' '}

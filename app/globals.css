@@ -97,6 +97,14 @@
   .container-site {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  /* Form text input */
+  .field {
+    @apply w-full bg-brand-bg border border-white/[0.12] rounded-lg px-4 py-3
+           text-white placeholder-content-subtle text-sm
+           focus:outline-none focus:border-primary transition-colors duration-200
+           disabled:opacity-50;
+  }
 }
 
 @layer utilities {

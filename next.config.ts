@@ -1,12 +1,12 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  output: 'export',
   images: {
-    formats: ['image/avif', 'image/webp'],
+    // Image optimisation requires a Node server — disabled for static export.
+    // All images are served as-is; they are already compressed PNGs/SVGs.
+    unoptimized: true,
   },
-  // Enable static export compatibility
-  // Remove the line below if you need API routes or SSR
-  // output: 'export',
 }
 
 export default nextConfig
