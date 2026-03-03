@@ -1,20 +1,25 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-
-const productLinks = [
-  { label: 'Features', href: '#features' },
-  { label: 'How It Works', href: '#what-we-offer' },
-  { label: 'Live App', href: 'https://www.vavilonapp.rs', external: true },
-]
-
-const companyLinks = [
-  { label: 'Mission', href: '#mission' },
-  { label: 'Contact', href: '#contact' },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const currentYear = new Date().getFullYear()
 
 export default function Footer() {
+  const { t } = useLanguage()
+
+  const productLinks = [
+    { label: t.nav_features,     href: '#features' },
+    { label: t.nav_how_it_works, href: '#what-we-offer' },
+    { label: t.footer_live_app,  href: 'https://www.vavilonapp.rs', external: true },
+  ]
+
+  const companyLinks = [
+    { label: t.nav_mission, href: '#mission' },
+    { label: t.nav_contact, href: '#contact' },
+  ]
+
   return (
     <footer
       role="contentinfo"
@@ -40,8 +45,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-content-muted text-sm leading-relaxed max-w-xs">
-              Real-time spoken translation for tours, museums, and conferences.
-              One speaker, 70+ languages, zero apps to install.
+              {t.footer_desc}
             </p>
 
             {/* App and email links */}
@@ -68,7 +72,7 @@ export default function Footer() {
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
-                Email us
+                {t.footer_email_us}
               </a>
             </div>
           </div>
@@ -76,11 +80,11 @@ export default function Footer() {
           {/* Column 2 - Product */}
           <nav aria-label="Product links">
             <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">
-              Product
+              {t.footer_product}
             </h3>
             <ul className="flex flex-col gap-3" role="list">
               {productLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.href}>
                   {link.external ? (
                     <a
                       href={link.href}
@@ -111,11 +115,11 @@ export default function Footer() {
           <div>
             <nav aria-label="Company links">
               <h3 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">
-                Company
+                {t.footer_company}
               </h3>
               <ul className="flex flex-col gap-3 mb-8" role="list">
                 {companyLinks.map((link) => (
-                  <li key={link.label}>
+                  <li key={link.href}>
                     <a
                       href={link.href}
                       className="text-content-muted hover:text-white text-sm transition-colors duration-200"
@@ -134,10 +138,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-content-subtle text-xs">
-            © {currentYear} Vavilon Solutions DOO Kraljevo. All rights reserved.
+            © {currentYear} Vavilon Solutions DOO Kraljevo. {t.footer_rights}
           </p>
           <p className="text-content-subtle text-xs">
-            Built in Serbia 🇷🇸 · Powered by{' '}
+            {t.footer_built}{' '}
             <span className="text-content-muted">Azure AI</span>
           </p>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 
 // ── Shared lead form ─────────────────────────────────────────────────────────
@@ -11,6 +12,7 @@ interface LeadFormProps {
 }
 
 function LeadForm({ plan, showPhone = false }: LeadFormProps) {
+  const { t } = useLanguage()
   const [name,    setName]    = useState('')
   const [surname, setSurname] = useState('')
   const [email,   setEmail]   = useState('')
@@ -44,7 +46,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
       if (!res.ok) throw new Error('server')
       setDone(true)
     } catch {
-      setErr('Could not reach the server. Please try again.')
+      setErr(t.form_error)
       setLoading(false)
     }
   }
@@ -52,7 +54,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
   if (done) {
     return (
       <p className="text-sm text-green-400 text-center py-4 font-medium">
-        Our team will contact you shortly.
+        {t.form_success}
       </p>
     )
   }
@@ -69,7 +71,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
       <div className="flex gap-3">
         <input
           type="text"
-          placeholder="First name"
+          placeholder={t.form_first_name}
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -79,7 +81,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
         />
         <input
           type="text"
-          placeholder="Last name"
+          placeholder={t.form_last_name}
           required
           value={surname}
           onChange={(e) => setSurname(e.target.value)}
@@ -91,7 +93,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
 
       <input
         type="email"
-        placeholder="Email address"
+        placeholder={t.form_email}
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -103,7 +105,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
       {showPhone && (
         <input
           type="tel"
-          placeholder="Phone number (optional)"
+          placeholder={t.form_phone}
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           disabled={loading}
@@ -118,7 +120,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
         className="btn-primary mt-1 disabled:opacity-40 disabled:cursor-not-allowed
                    disabled:transform-none disabled:shadow-none"
       >
-        {loading ? 'Sending…' : 'Contact Me →'}
+        {loading ? t.btn_sending : t.btn_contact_me}
       </button>
     </form>
   )
@@ -127,7 +129,10 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
 // ── Card 2 — Professional ─────────────────────────────────────────────────────
 
 function ProfessionalCard() {
+  const { t } = useLanguage()
   const [showForm, setShowForm] = useState(false)
+
+  const features = [t.pro_f1, t.pro_f2, t.pro_f3, t.pro_f4, t.pro_f5, t.pro_f6]
 
   return (
     <div className="bg-brand-surface rounded-2xl border border-white/[0.12] overflow-hidden
@@ -136,7 +141,7 @@ function ProfessionalCard() {
       <div className="bg-primary px-8 py-6 text-center">
         <span className="inline-block bg-white/20 text-white text-xs font-bold
                          uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-          Professional
+          {t.pro_badge}
         </span>
         <div className="flex items-baseline justify-center gap-1 mb-1">
           <span className="text-white/50 line-through text-xl mr-2">€450/mo</span>
@@ -144,21 +149,14 @@ function ProfessionalCard() {
           <span className="text-white/70 text-lg font-medium">/month</span>
         </div>
         <p className="text-white/60 text-sm mt-2">
-          Everything included, billed monthly
+          {t.pro_billing}
         </p>
       </div>
 
       {/* Body */}
       <div className="px-8 py-6 flex flex-col flex-1">
         <ul className="flex flex-col gap-3 mb-6">
-          {[
-            '70+ languages with live translated audio',
-            '60+ listeners per tour, simultaneously',
-            'Listeners join via QR code, no app needed',
-            'Under 500 ms latency',
-            'iOS, Android, and any browser',
-            'Cancel any time',
-          ].map((f) => (
+          {features.map((f) => (
             <li key={f} className="flex items-start gap-3 text-sm text-content-muted leading-snug">
               <svg className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 16 16"
                    fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -176,14 +174,14 @@ function ProfessionalCard() {
               onClick={() => setShowForm(true)}
               className="btn-primary w-full text-center"
             >
-              Start Subscription →
+              {t.btn_subscribe}
             </button>
           ) : (
             <>
               {/* Error / sales message */}
               <div className="bg-accent/10 border border-accent/25 rounded-lg px-4 py-3 mb-1">
                 <p className="text-sm text-accent text-center leading-relaxed">
-                  There is something wrong on our side. Our sales team will contact you immediately.
+                  {t.pro_sales_msg}
                 </p>
               </div>
               <LeadForm plan="professional" showPhone />
@@ -198,16 +196,18 @@ function ProfessionalCard() {
 // ── Main section ─────────────────────────────────────────────────────────────
 
 export default function PricingSection() {
+  const { t } = useLanguage()
+
   return (
     <section id="pricing" className="container-site py-24">
       {/* Heading */}
       <div className="text-center mb-14">
-        <span className="eyebrow mb-3 block">Plans &amp; Pricing</span>
+        <span className="eyebrow mb-3 block">{t.pricing_eyebrow}</span>
         <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-4">
-          Simple, transparent pricing
+          {t.pricing_h2}
         </h2>
         <p className="section-sub max-w-md mx-auto">
-          One plan. Everything included. Start free, no commitment until your trial ends.
+          {t.pricing_sub}
         </p>
       </div>
 
@@ -221,21 +221,20 @@ export default function PricingSection() {
           <div className="bg-primary/80 px-8 py-6 text-center">
             <span className="inline-block bg-white/20 text-white text-xs font-bold
                              uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-              7-Day Free Trial
+              {t.trial_badge}
             </span>
             <div className="flex items-baseline justify-center gap-1 mb-1">
-              <span className="text-white text-5xl font-extrabold leading-none">Free</span>
+              <span className="text-white text-5xl font-extrabold leading-none">{t.trial_price}</span>
             </div>
             <p className="text-white/60 text-sm mt-2">
-              No charge for 7 days, card not required
+              {t.trial_billing}
             </p>
           </div>
 
           {/* Body */}
           <div className="px-8 py-6 flex flex-col flex-1">
             <p className="text-sm text-content-muted leading-relaxed mb-2">
-              Tell us a bit about your agency and we&apos;ll reach out to get you set up.
-              Full access to all features during the trial, no commitment.
+              {t.trial_desc}
             </p>
 
             <div className="mt-auto">

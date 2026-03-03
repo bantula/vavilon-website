@@ -1,4 +1,10 @@
+'use client'
+
+import { useLanguage } from '@/contexts/LanguageContext'
+
 export default function Mission() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="mission"
@@ -23,7 +29,7 @@ export default function Mission() {
 
           {/* Eyebrow */}
           <span className="eyebrow mb-6 block" id="mission-heading">
-            Our Mission
+            {t.mission_eyebrow}
           </span>
 
           {/* Large quote */}
@@ -44,11 +50,9 @@ export default function Mission() {
               className="relative text-2xl sm:text-3xl lg:text-4xl font-semibold
                          text-white leading-snug tracking-tight px-4 lg:px-12"
             >
-              We believe every experience deserves to be{' '}
-              <span className="text-gradient">understood.</span>{' '}
-              Vavilon exists to remove the language barrier from tours,
-              museums, and conferences, from any moment that should bring
-              people together, not divide them.
+              {t.mission_quote_a}{' '}
+              <span className="text-gradient">{t.mission_quote_hl}</span>{' '}
+              {t.mission_quote_b}
             </p>
           </blockquote>
 
@@ -65,7 +69,7 @@ export default function Mission() {
           {/* Attribution / tagline */}
           <div className="mt-8 flex flex-col items-center gap-2">
             <p className="text-content-muted text-base font-medium">
-              Built in Serbia. Deployed globally. Powered by Azure AI.
+              {t.mission_built}
             </p>
             <p className="text-content-subtle text-sm">
               vavilonsolutions.rs
@@ -77,21 +81,9 @@ export default function Mission() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16"
             aria-label="Company values"
           >
-            <Pillar
-              icon="⚡"
-              title="Speed"
-              desc="Sub-500ms latency so nothing is lost in the moment."
-            />
-            <Pillar
-              icon="🌍"
-              title="Inclusivity"
-              desc="70+ languages ensuring no listener is left behind."
-            />
-            <Pillar
-              icon="🔒"
-              title="Simplicity"
-              desc="No downloads. No accounts. Just scan and listen."
-            />
+            <Pillar icon="⚡" title={t.mission_v1_title} desc={t.mission_v1_desc} />
+            <Pillar icon="🌍" title={t.mission_v2_title} desc={t.mission_v2_desc} />
+            <Pillar icon="🔒" title={t.mission_v3_title} desc={t.mission_v3_desc} />
           </div>
         </div>
       </div>

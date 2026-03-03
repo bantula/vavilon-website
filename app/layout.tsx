@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import StickyContactButton from '@/components/StickyContactButton'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,22 +54,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-brand-bg text-content antialiased min-h-screen flex flex-col">
-        {/* Skip navigation link for keyboard / screen-reader users */}
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
+        <LanguageProvider>
+          {/* Skip navigation link for keyboard / screen-reader users */}
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
 
-        <Header />
+          <Header />
 
-        {/* Persistent right-side sticky Contact Us button */}
-        <StickyContactButton />
+          {/* Persistent right-side sticky Contact Us button */}
+          <StickyContactButton />
 
-        {/* Page content */}
-        <main id="main-content" className="flex-1" tabIndex={-1}>
-          {children}
-        </main>
+          {/* Page content */}
+          <main id="main-content" className="flex-1" tabIndex={-1}>
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   )

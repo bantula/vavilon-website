@@ -1,11 +1,14 @@
 'use client'
 
 import Script from 'next/script'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 // TODO: Replace with your Calendly URL, e.g. https://calendly.com/yourname/demo
 const CALENDLY_URL = 'https://calendly.com/andrejbantulic-vavilonsolutions/30min'
 
 export default function BookingSection() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="contact"
@@ -29,14 +32,13 @@ export default function BookingSection() {
         {/* Section header */}
         <div className="section-center mb-12">
           <span className="eyebrow mb-3 block" id="booking-heading">
-            Book a Demo
+            {t.booking_eyebrow}
           </span>
           <h2 className="section-heading mb-4">
-            See Vavilon in action
+            {t.booking_h2}
           </h2>
           <p className="section-sub">
-            Pick a time that works for you and we will walk you through
-            the platform live, no preparation needed on your end.
+            {t.booking_sub}
           </p>
         </div>
 

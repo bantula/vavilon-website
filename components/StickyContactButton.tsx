@@ -1,3 +1,7 @@
+'use client'
+
+import { useLanguage } from '@/contexts/LanguageContext'
+
 /**
  * StickyContactButton
  *
@@ -8,6 +12,8 @@
  * WCAG AA: 44×44px minimum tap target, aria-label, focus ring.
  */
 export default function StickyContactButton() {
+  const { t } = useLanguage()
+
   return (
     <a
       href="#contact"
@@ -27,7 +33,7 @@ export default function StickyContactButton() {
     >
       {/* Vertical text — rotated 90° counter-clockwise */}
       <span className="-rotate-90 whitespace-nowrap select-none" aria-hidden="true">
-        Contact Us
+        {t.sticky_contact}
       </span>
 
       {/* Small accent line at bottom */}

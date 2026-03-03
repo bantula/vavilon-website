@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Newsletter() {
+  const { t } = useLanguage()
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
@@ -43,16 +45,15 @@ export default function Newsletter() {
 
           {/* Newsletter */}
           <div className="text-center mb-14">
-            <span className="eyebrow mb-4 block">Stay Updated</span>
+            <span className="eyebrow mb-4 block">{t.news_eyebrow}</span>
             <h2
               id="newsletter-heading"
               className="section-heading mb-4"
             >
-              Get product updates & insights
+              {t.news_h2}
             </h2>
             <p className="section-sub mb-10">
-              Early access news, new language additions, and translation
-              tips delivered to your inbox. No spam, unsubscribe any time.
+              {t.news_sub}
             </p>
 
             {status === 'success' ? (
@@ -65,7 +66,7 @@ export default function Newsletter() {
                 <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                You&apos;re on the list! We&apos;ll be in touch soon.
+                {t.news_success}
               </div>
             ) : (
               <form
@@ -76,7 +77,7 @@ export default function Newsletter() {
               >
                 <div className="flex-1">
                   <label htmlFor="newsletter-email" className="sr-only">
-                    Your email address
+                    {t.news_label}
                   </label>
                   <input
                     id="newsletter-email"
@@ -84,7 +85,7 @@ export default function Newsletter() {
                     name="email"
                     autoComplete="email"
                     required
-                    placeholder="your@email.com"
+                    placeholder={t.news_placeholder}
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value)
@@ -104,7 +105,7 @@ export default function Newsletter() {
                       role="alert"
                       className="mt-2 text-xs text-accent text-left"
                     >
-                      Please enter a valid email address.
+                      {t.news_email_error}
                     </p>
                   )}
                 </div>
@@ -112,7 +113,7 @@ export default function Newsletter() {
                   type="submit"
                   className="btn-secondary whitespace-nowrap sm:self-start"
                 >
-                  Subscribe
+                  {t.btn_subscribe_news}
                 </button>
               </form>
             )}
@@ -124,7 +125,7 @@ export default function Newsletter() {
             aria-hidden="true"
           >
             <span className="flex-1 h-px bg-white/10" />
-            <span className="text-content-subtle text-xs uppercase tracking-widest">or</span>
+            <span className="text-content-subtle text-xs uppercase tracking-widest">{t.divider_or}</span>
             <span className="flex-1 h-px bg-white/10" />
           </div>
 
@@ -139,23 +140,22 @@ export default function Newsletter() {
             />
             <div className="relative z-10">
               <h3 className="text-2xl font-bold text-white mb-3">
-                Ready to break the language barrier?
+                {t.demo_h3}
               </h3>
               <p className="text-content-muted mb-7 max-w-md mx-auto text-sm">
-                See Vavilon in action with a personalised live demo. We&apos;ll
-                show you exactly how it works for your tours, museum, or conference.
+                {t.demo_desc}
               </p>
               <a
                 href="mailto:info@vavilonsolutions.rs?subject=Demo%20Request"
                 className="btn-primary text-base px-10 py-4"
               >
-                Book a Demo
+                {t.btn_book_demo}
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
               </a>
               <p className="mt-4 text-content-subtle text-xs">
-                Or reach us directly:{' '}
+                {t.demo_reach}{' '}
                 <a
                   href="mailto:info@vavilonsolutions.rs"
                   className="text-content-muted hover:text-white underline underline-offset-2 transition-colors duration-200"

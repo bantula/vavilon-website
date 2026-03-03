@@ -1,19 +1,76 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { type Lang } from '@/lib/translations'
 
-const navLinks = [
-  { label: 'Features', href: '#features' },
-  { label: 'How It Works', href: '#what-we-offer' },
-  { label: 'Mission', href: '#mission' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Contact', href: '#contact' },
-]
+function LangSwitcher() {
+  const { lang, setLang, t } = useLanguage()
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm
+                   text-content-muted hover:text-white border border-white/10
+                   hover:border-white/20 transition-colors duration-200"
+      >
+        {lang === 'en' ? t.lang_english : t.lang_serbian}
+        <svg
+          className={`w-3 h-3 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5"
+          strokeLinecap="round" aria-hidden="true"
+        >
+          <path d="M2 4l4 4 4-4" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute right-0 top-full mt-1 w-28 rounded-lg overflow-hidden
+                        bg-brand-surface border border-white/10 shadow-lg z-50">
+          {(['en', 'sr'] as Lang[]).map((l) => (
+            <button
+              key={l}
+              type="button"
+              onClick={() => { setLang(l); setOpen(false) }}
+              className={`w-full text-left px-4 py-2 text-sm transition-colors duration-150
+                ${lang === l
+                  ? 'text-white bg-primary/20'
+                  : 'text-content-muted hover:text-white hover:bg-white/5'}`}
+            >
+              {l === 'en' ? 'English' : 'Srpski'}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default function Header() {
+  const { t } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const navLinks = [
+    { label: t.nav_features,     href: '#features' },
+    { label: t.nav_how_it_works, href: '#what-we-offer' },
+    { label: t.nav_mission,      href: '#mission' },
+    { label: t.nav_pricing,      href: '#pricing' },
+    { label: t.nav_contact,      href: '#contact' },
+  ]
 
   return (
     <header
@@ -59,16 +116,17 @@ export default function Header() {
 
           {/* Desktop right actions */}
           <div className="hidden md:flex items-center gap-3">
+            <LangSwitcher />
             <a
               href="https://www.vavilonapp.rs"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost !py-2 !px-4 !text-sm"
             >
-              Launch App
+              {t.btn_launch_app}
             </a>
             <a href="#contact" className="btn-primary !py-2 !px-5 !text-sm">
-              Book a Demo
+              {t.btn_book_demo}
             </a>
           </div>
 
@@ -121,6 +179,9 @@ export default function Header() {
             ))}
           </ul>
           <div className="mt-4 pt-4 border-t border-white/10 flex flex-col gap-2">
+            <div className="px-1 pb-1">
+              <LangSwitcher />
+            </div>
             <a
               href="https://www.vavilonapp.rs"
               target="_blank"
@@ -128,14 +189,14 @@ export default function Header() {
               className="btn-ghost w-full text-center !py-2.5"
               onClick={() => setMenuOpen(false)}
             >
-              Launch App
+              {t.btn_launch_app}
             </a>
             <a
               href="#contact"
               className="btn-primary w-full text-center !py-2.5"
               onClick={() => setMenuOpen(false)}
             >
-              Book a Demo
+              {t.btn_book_demo}
             </a>
           </div>
         </nav>
