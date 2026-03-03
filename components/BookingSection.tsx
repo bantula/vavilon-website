@@ -36,7 +36,7 @@ export default function BookingSection() {
           </h2>
           <p className="section-sub">
             Pick a time that works for you and we will walk you through
-            the platform live — no preparation needed on your end.
+            the platform live, no preparation needed on your end.
           </p>
         </div>
 

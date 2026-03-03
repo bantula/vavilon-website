@@ -145,7 +145,7 @@ function ProfessionalCard() {
           <span className="text-white/70 text-lg font-medium">/month</span>
         </div>
         <p className="text-white/60 text-sm mt-2">
-          Everything included — billed monthly
+          Everything included, billed monthly
         </p>
       </div>
 
@@ -153,9 +153,9 @@ function ProfessionalCard() {
       <div className="px-8 py-6 flex flex-col flex-1">
         <ul className="flex flex-col gap-3 mb-6">
           {[
-            '70+ languages — live translated audio',
+            '70+ languages with live translated audio',
             '60+ listeners per tour, simultaneously',
-            'Listeners join via QR code — no app needed',
+            'Listeners join via QR code, no app needed',
             'Under 500 ms latency',
             'iOS, Android, and any browser',
             'Cancel any time',
@@ -184,7 +184,7 @@ function ProfessionalCard() {
               {/* Error / sales message */}
               <div className="bg-accent/10 border border-accent/25 rounded-lg px-4 py-3 mb-1">
                 <p className="text-sm text-accent text-center leading-relaxed">
-                  There is something wrong on our side — our sales team will contact you immediately.
+                  There is something wrong on our side. Our sales team will contact you immediately.
                 </p>
               </div>
               <LeadForm plan="professional" showPhone />
@@ -208,7 +208,7 @@ export default function PricingSection() {
           Simple, transparent pricing
         </h2>
         <p className="section-sub max-w-md mx-auto">
-          One plan. Everything included. Start free — no commitment until your trial ends.
+          One plan. Everything included. Start free, no commitment until your trial ends.
         </p>
       </div>
 
@@ -228,7 +228,7 @@ export default function PricingSection() {
               <span className="text-white text-5xl font-extrabold leading-none">Free</span>
             </div>
             <p className="text-white/60 text-sm mt-2">
-              No charge for 7 days — card not required
+              No charge for 7 days, card not required
             </p>
           </div>
 
@@ -236,7 +236,7 @@ export default function PricingSection() {
           <div className="px-8 py-6 flex flex-col flex-1">
             <p className="text-sm text-content-muted leading-relaxed mb-2">
               Tell us a bit about your agency and we&apos;ll reach out to get you set up.
-              Full access to all features during the trial — no commitment.
+              Full access to all features during the trial, no commitment.
             </p>
 
             <div className="mt-auto">

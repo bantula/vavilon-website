@@ -52,7 +52,7 @@ export default function Newsletter() {
             </h2>
             <p className="section-sub mb-10">
               Early access news, new language additions, and translation
-              tips — delivered to your inbox. No spam, unsubscribe any time.
+              tips delivered to your inbox. No spam, unsubscribe any time.
             </p>
 
             {status === 'success' ? (
