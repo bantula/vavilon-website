@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3000'
 
 // ── Shared lead form ─────────────────────────────────────────────────────────
 
@@ -30,7 +29,7 @@ function LeadForm({ plan, showPhone = false }: LeadFormProps) {
     setErr('')
 
     try {
-      const res = await fetch(`${BACKEND_URL}/api/leads`, {
+      const res = await fetch('/api/leads', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({
