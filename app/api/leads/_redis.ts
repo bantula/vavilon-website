@@ -12,11 +12,11 @@ export async function getClient() {
 
   redisClient = createClient({
     url: process.env.REDIS_URL
-      ? `redis://${process.env.REDIS_URL}:6380`
+      ? `rediss://${process.env.REDIS_URL}:6380`
       : 'redis://localhost:6379',
     password: process.env.REDIS_PASSWORD,
     socket: process.env.REDIS_URL
-      ? { tls: true as const, rejectUnauthorized: false, reconnectStrategy }
+      ? { rejectUnauthorized: false, reconnectStrategy }
       : { reconnectStrategy },
   })
 
