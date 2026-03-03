@@ -6,6 +6,11 @@ import { randomUUID } from 'crypto'
 
 let redisClient: ReturnType<typeof createClient> | null = null
 
+const reconnectStrategy = (retries: number) => {
+  if (retries > 5) return new Error('Redis reconnect limit exceeded')
+  return Math.min(retries * 100, 2000)
+}
+
 async function getClient() {
   if (redisClient && redisClient.isOpen) return redisClient
 
@@ -14,14 +19,10 @@ async function getClient() {
       ? `redis://${process.env.REDIS_URL}:6380`
       : 'redis://localhost:6379',
     password: process.env.REDIS_PASSWORD,
-    socket: {
-      tls: !!process.env.REDIS_URL,
-      rejectUnauthorized: false,
-      reconnectStrategy: (retries) => {
-        if (retries > 5) return new Error('Redis reconnect limit exceeded')
-        return Math.min(retries * 100, 2000)
-      },
-    },
+    // When REDIS_URL is set (Azure), tls must be literally `true` — not boolean.
+    socket: process.env.REDIS_URL
+      ? { tls: true as const, rejectUnauthorized: false, reconnectStrategy }
+      : { reconnectStrategy },
   })
 
   redisClient.on('error', (err) => console.error('Leads Redis error:', err))
