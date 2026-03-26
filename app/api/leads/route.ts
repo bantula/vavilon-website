@@ -1,6 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
-import { getClient } from './_redis'
+import { BlobServiceClient } from '@azure/storage-blob'
+
+// ── Blob Storage ──────────────────────────────────────────────────────────────
+
+async function appendLeadToBlob(lead: object) {
+  const connStr = process.env.AZURE_STORAGE_CONNECTION_STRING
+  if (!connStr) throw new Error('AZURE_STORAGE_CONNECTION_STRING not set')
+
+  const blobService  = BlobServiceClient.fromConnectionString(connStr)
+  const container    = blobService.getContainerClient('leads')
+  const appendBlob   = container.getAppendBlobClient('leads.jsonl')
+
+  await appendBlob.createIfNotExists()
+  const line = JSON.stringify(lead) + '\n'
+  await appendBlob.appendBlock(line, Buffer.byteLength(line))
+}
 
 // ── POST /api/leads ───────────────────────────────────────────────────────────
 
@@ -34,17 +49,14 @@ export async function POST(req: NextRequest) {
     createdAt: new Date().toISOString(),
   }
 
-  // Always log so data is captured in Azure Monitor even if Redis is unavailable
   console.log(`[lead:received] ${JSON.stringify(lead)}`)
 
   try {
-    const client = await getClient()
-    await client.set(`lead:${lead.id}`, JSON.stringify(lead))
-    await client.lPush('leads:index', lead.id)
+    await appendLeadToBlob(lead)
     console.log(`[lead:saved] id=${lead.id}`)
   } catch (err) {
-    // Redis unavailable — lead is still in stdout logs above; don't fail the user
-    console.error(`[lead:redis-error] id=${lead.id}`, err)
+    console.error(`[lead:blob-error] id=${lead.id}`, err)
+    // Still return ok — lead is in logs; don't show error to user
   }
 
   return NextResponse.json({ ok: true }, { status: 201 })
